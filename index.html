@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hidden" id="confetti">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+    </div>
+    <div class="container">
+        <div class="heart"><i class="fas fa-heart"></i></div>
+        <h1>Love Calculator</h1>
+        <div class="input-group">
+            <input id="name1" type="text" placeholder="Your Name">
+        </div>
+        <div class="input-group">
+            <input id="name2" type="text" placeholder="Your Partner's Name">
+        </div>
+        <div class="loader hidden" id="loader"></div>
+        <div id="result" class="hidden"></div>
+        <button onclick="calculateLove()">Calculate Love</button>
+    </div>
+
+    <audio id="cheer">
+        <source src="assets/cheer.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="sad">
+        <source src="assets/sad.mp3" type="audio/mp3">
+    </audio>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
