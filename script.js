@@ -4,20 +4,9 @@ const confettiElement = document.getElementById("confetti");
 const cheerAudio = document.getElementById("cheer");
 const sadAudio = document.getElementById("sad");
 
-function getLovePercentage(n1, n2) {
-  // Simple algorithm: sum character codes and mod by 100
-  let sum = 0;
-  for (let i = 0; i < n1.length; i++) {
-    sum += n1.charCodeAt(i);
-  }
-  for (let i = 0; i < n2.length; i++) {
-    sum += n2.charCodeAt(i);
-  }
+const loveCalculatorApiUrl = "http://localhost:3000/calculate";
 
-  return sum % 100;
-}
-
-function calculateLove() {
+async function calculateLove() {
   const name1 = document.getElementById("name1").value.trim().toLowerCase();
   const name2 = document.getElementById("name2").value.trim().toLowerCase();
 
@@ -27,7 +16,12 @@ function calculateLove() {
     return;
   }
 
-  const percentage = getLovePercentage(name1, name2);
+  const response = await fetch(
+    `${loveCalculatorApiUrl}?name1=${name1}&name2=${name2}`
+  );
+
+  const data = await response.json();
+  const percentage = parseInt(data?.loveScore || 0);
 
   let message = "";
   if (percentage === 100) {
