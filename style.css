@@ -11,7 +11,8 @@ body {
   background-size: cover;
 }
 
-.container {
+/* TODO: 2. add container class */
+/* .container {
   max-width: 400px;
   width: 100%;
   background: white;
@@ -23,13 +24,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
 
 .heart {
   font-size: 4rem;
   color: #ff6b6b;
   margin: 0 auto 24px;
-  animation: pulse 1.5s ease-in-out infinite;
+  /* TODO: 3. Add pulse animation */
+  /* animation: pulse 1.5s ease-in-out infinite; */
   text-align: center;
 }
 

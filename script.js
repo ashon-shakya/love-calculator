@@ -7,12 +7,13 @@ const sadAudio = document.getElementById("sad");
 function getLovePercentage(n1, n2) {
   // Simple algorithm: sum character codes and mod by 100
   let sum = 0;
-  for (let i = 0; i < n1.length; i++) {
-    sum += n1.charCodeAt(i);
-  }
-  for (let i = 0; i < n2.length; i++) {
-    sum += n2.charCodeAt(i);
-  }
+  // TODO: 6. Implement love percentage calculation logic
+  // for (let i = 0; i < n1.length; i++) {
+  //   sum += n1.charCodeAt(i);
+  // }
+  // for (let i = 0; i < n2.length; i++) {
+  //   sum += n2.charCodeAt(i);
+  // }
 
   return sum % 100;
 }
@@ -27,6 +28,7 @@ function calculateLove() {
     return;
   }
 
+  // get love percentage
   const percentage = getLovePercentage(name1, name2);
 
   let message = "";
